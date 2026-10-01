@@ -48,7 +48,7 @@ class ProductoKwikE:
             return f"Los productos no son iguales"
 
 caramelo = ProductoKwikE("Caramelo", 1, d.date(2027,6,30), 10.0, 100, "Snacks")
-pelota = ProductoKwikE("pelota", 1, d.date(2027,6,30), 10.0, 100, "")
+pelota = ProductoKwikE("pelota", 1, d.date(2027,6,30), 10.0, 100, "Conveniencia")
 
 print(caramelo)
 
