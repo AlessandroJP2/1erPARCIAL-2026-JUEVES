@@ -3,13 +3,14 @@ import datetime as d
 class ProductoKwikE:
     def __init__(self, descripcion : str, id_producto : int,
                     fecha_vencimiento : d.date, precio : float,
-                    stock: int):
+                    stock: int, categoria : str):
     
         self.descripcion = descripcion
         self.id_producto = id_producto
         self.fecha_vencimiento = fecha_vencimiento
         self.precio = precio
         self.stock = stock
+        self.categoria = categoria
 
     def cambiar(self, detalle):
         if detalle == self.descripcion:
@@ -27,6 +28,9 @@ class ProductoKwikE:
         elif detalle == self.stock:
             self.stock = int(input("Ingrese el nuevo stock:"))
             return print(f"El nuevo stock del producto es {self.stock}")
+        elif detalle == self.categoria:
+            self.categoria = str(input("Ingrese la nueva categoria:"))
+            return print(f"La nueva categoria del producto es {self.categoria}")
 
     def modificar_stock(self):
         if self.fecha_vencimiento < d.date.today():
@@ -36,7 +40,7 @@ class ProductoKwikE:
             return print("El producto no ha vencido")
 
 
-caramelo = ProductoKwikE("Caramelo", 1, d.date(2027,6,30), 10.0, 100)
+caramelo = ProductoKwikE("Caramelo", 1, d.date(2027,6,30), 10.0, 100, "Snacks")
 
 caramelo.cambiar(caramelo.id_producto)
 
