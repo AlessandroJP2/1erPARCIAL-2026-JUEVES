@@ -1,12 +1,10 @@
 eventos = ["Kermés", "Concurso de comida", "Reunión del consejo municipal"]
 
-def organizar_eventos (eventos = [], expresion = False):
-    eventos = eventos.copy()
+def organizar_eventos (eventos, expresion = False):
     if expresion == True:
-        eventos = eventos.sort(reverse = True)
+        return sorted(eventos, reverse = True)
     else:
-        eventos = eventos.sort()
-    return eventos
+        return sorted(eventos, reverse = False)
 
-print(organizar_eventos(eventos))
+print(organizar_eventos(eventos, True))
     
